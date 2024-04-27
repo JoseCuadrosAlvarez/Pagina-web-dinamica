@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Currículum</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css">
+
+    <style>
+        /* Agregamos estilos directamente en línea para asegurar que se apliquen */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to top right, #3d7b80 0%, #451a3e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cv-contenido {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc; /* Añadimos un borde al contenedor */
+            border-radius: 5px; /* Redondeamos las esquinas */
+            background-color: #fff; /* Cambiamos el color de fondo */
+        }
+
+        .inp-group section {
+            margin-bottom: 15px; /* Aumentamos el espacio entre las secciones */
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="cv-contenido">
+    <div class="header">
+        <h1>Formulario de Currículum</h1>
+    </div>
+
+    <form action="formulario.php" method="post" class="formulario">
+        <div class="mas-contenido">
+            <section>
+                <label for="nombre">Nombre y Apellidos:</label>
+                <input type="text" id="nombre_apellidos" name="nombre_apellidos" required>
+            </section>
+
+            <section>
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </section>
+
+            <section>
+                <label for="ocupacion">Ocupación:</label>
+                <input type="text" id="ocupacion" name="ocupacion" required>
+            </section>
+            
+            <section>
+                <label for="nacionalidad">Nacionalidad:</label>
+                <select id="nacionalidad" name="nacionalidad" required>
+                    <option value="peruana">Peruana</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </section>
+
+            <section>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </section>
+            <section>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </section>
+            <section>
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </section>
+            <section>
+                <label for="linkedin">Linkedin:</label>
+                <input type="text" id="linkedin" name="linkedin" required>
+            </section>
+                
+            <div id="entradasIdioma">
+                <div class="entrada-idioma">
+                    <label for="idioma1">Idioma:</label>
+                    <input type="text" name="idiomas[]" id="idioma1" required>
+                    <label for="nivel1">Nivel:</label>
+                    <select name="niveles[]" id="nivel1" required>
+                        <option value="">Seleccionar nivel</option>
+                        <option value="basico">Nativo</option>
+                        <option value="basico">Básico</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="agregarIdiomaBtn" class="btn">Agregar otro idioma</button>
+
+            <section>
+                <label for="lenguajes_programacion">Lenguajes de programación:</label>
+                <select id="lenguajes_programacion" name="lenguajes_programacion[]" multiple>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                </select>
+            </section>
+
+            <section>
+                <label for="habilidades">Habilidad:</label>
+                <select id="habilidades" name="habilidades[]" multiple>
+                    <option value="creatividad">Creatividad</option>
+                    <option value="dedicacion">Dedicacion</option>
+                    <option value="adaptabilidad">Adaptabilidad</option>
+                    <option value="trabajo en equipo">Trabajo en equipo</option>
+
+                </select>
+            </section>
+
+            <section>
+                <label for="aptitudes">Aptitud:</label>
+                <select id="aptitudes" name="aptitudes[]" multiple>
+                    <option value="organizacion">Organizacion</option>
+                    <option value="liderazgo">Liderazgo</option>
+                    <option value="autocontrol">Autocontrol</option>
+                    <option value="comunicacion">Comunicacion</option>
+
+                </select>
+            </section>
+
+
+            <section>
+                <label for="experiencia">Experiencia laboral:</label><br>
+                <textarea id="experiencia" name="experiencia" rows="4" cols="50" required></textarea>
+            </section>
+            <section>
+                <label for="formacion_secundaria">Nombre de la educación secundaria:</label>
+                <input type="text" id="formacion_secundaria" name="formacion_secundaria" required>
+            </section>
+            <section>
+                <label for="formacion_superior">Formación superior (universidad, instituto, etc.):</label>
+                <input type="text" id="formacion_superior" name="formacion_superior" required>
+            </section>
+            
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+
+<!-- <script src="JS/lengPograScript.js"></script> -->
+<script src="JS/scrpipt.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+
+<script>
+    new MultiSelectTag('lenguajes_programacion')
+      // id
+</script>
+
+<script> 
+    new MultiSelectTag('habilidades')
+</script>
+
+<script>
+    new MultiSelectTag('aptitudes')
+</script>
+
+</body>
+</html>

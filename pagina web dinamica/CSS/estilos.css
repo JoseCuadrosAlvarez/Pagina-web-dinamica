@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top right, #3d7b80 0%, #451a3e 100%);
+}
+
+.container {
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 600px;
+  padding: 20px;
+  box-shadow: 0 2px 2px 43px rgba(0, 0, 0, 0.1);
+}
+
+.entrada-campo,
+.entrada-idioma  {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.entrada-campo,
+.entrada-idioma label {
+  margin-right: 10px;
+}
+
+.entrada-campo, .entrada-idioma input,
+.entrada-campo, select {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+  gap: 1em; /* Cambiado el espacio entre elementos a 1em */
+  margin-bottom: 100px;
+}
+
+.delete {
+  text-decoration: none;
+  display: inline-block;
+  background: #f44336;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[list="aptitudes"],
+select,
+textarea {
+  padding: 5px 10px;
+  background: #efefef;
+  border: none;
+  width: 100%;
+  margin-top: -1px;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: 1px solid #efefef;
+}
+
+
+input[type="submit"], 
+.btn {
+  width: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  background: #efefef; 
+  border: none;
+  padding: 10px; 
+  margin-bottom: 5px; 
+  margin-top: -1px;
+  border-radius: 5px; 
+}
+
+/* estilos especificos para los botones */
+input[type="submit"] {
+  margin-top: 20px;
+  width: auto;
+}
